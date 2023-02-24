@@ -1,0 +1,14 @@
+{
+    "es6-css-minify.genJSmap": true,
+    "es6-css-minify.minifyOnSave": "exists",
+    "es6-css-minify.jsMinPath": "/app/themes/web/js",
+    "less.compile": {
+        "compress": true,
+        "sourceMap": true,
+        "out": "${workspaceFolder}/app/themes/web/css/",
+        "main": [
+            "home.less",
+            "profile.less"
+        ]
+    }
+}
