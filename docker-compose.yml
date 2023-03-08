@@ -1,6 +1,7 @@
 version: '3'
 services:
     mysql:
+        image: mocitec-mysql
         build: ./build/mysql
         restart: always
         environment:
@@ -11,6 +12,7 @@ services:
         volumes:
             - mysql:/var/lib/mysql
     apache:
+        image: mocitec-apache
         build: ./build/apache
         restart: always
         ports:

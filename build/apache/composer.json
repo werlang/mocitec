@@ -39,6 +39,8 @@
       "coffeecode/optimizer": "2.0.2",
       "coffeecode/paginator": "1.0.7",
       "coffeecode/uploader": "1.0.11",
-      "dompdf/dompdf": "v1.2.2"
+      "dompdf/dompdf": "v1.2.2",
+      "firebase/php-jwt": "^5.2",
+      "laminas/laminas-config": "^3.5.0"
     }
   }
