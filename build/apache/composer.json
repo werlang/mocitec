@@ -41,6 +41,9 @@
       "coffeecode/uploader": "1.0.11",
       "dompdf/dompdf": "v1.2.2",
       "firebase/php-jwt": "^5.2",
-      "laminas/laminas-config": "^3.5.0"
+      "laminas/laminas-config": "^3.5.0",
+      "phpmailer/phpmailer": "6.*",
+      "league/oauth2-client": "2.6.1",
+      "league/oauth2-google": "3.0.4"
     }
   }
