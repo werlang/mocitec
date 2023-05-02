@@ -1,0 +1,35 @@
+version: '3'
+services:
+    mysql:
+        image: mocitec-mysql
+        build: ./build/mysql
+        restart: always
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        ports:
+            - '127.0.0.1:3306:3306'
+        volumes:
+            - mysql:/var/lib/mysql
+            - ./app:/app
+    apache:
+        image: mocitec-apache
+        build: ./build/apache
+        restart: always
+        volumes:
+            - ./app:/var/www/html
+            - vendor:/var/www/html/vendor
+    nginx:
+        image: valian/docker-nginx-auto-ssl
+        restart: always
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./nginx:/etc/nginx/conf.d
+        environment:
+            - SITES=${URL}=apache
+            - FORCE_HTTPS=true
+volumes:
+    mysql:
+    vendor:
