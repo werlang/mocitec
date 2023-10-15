@@ -8,7 +8,8 @@
         "out": "${workspaceFolder}/app/themes/web/css/",
         "main": [
             "home.less",
-            "profile.less"
+            "profile.less",
+            "selected.less"
         ]
     }
 }

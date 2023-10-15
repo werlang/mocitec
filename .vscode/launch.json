@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Mocitec",
+            "url": "http://mocitec.localhost",
+            "webRoot": "${workspaceFolder}/app/"
+        }
+    ]
+}
