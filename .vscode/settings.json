@@ -9,7 +9,8 @@
         "main": [
             "home.less",
             "profile.less",
-            "selected.less"
+            "selected.less",
+            "verify-certificate.less"
         ]
     }
 }
