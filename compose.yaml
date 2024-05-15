@@ -2,7 +2,7 @@ services:
     mysql:
         image: mocitec-mysql
         build: ./build/mysql
-        restart: always
+        restart: unless-stopped
         environment:
             - MYSQL_DATABASE=${MYSQL_DATABASE}
             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -14,13 +14,13 @@ services:
     apache:
         image: mocitec-apache
         build: ./build/apache
-        restart: always
+        restart: unless-stopped
         volumes:
             - ./app:/var/www/html
             - vendor:/var/www/html/vendor
     nginx:
         image: valian/docker-nginx-auto-ssl
-        restart: always
+        restart: unless-stopped
         ports:
             - "80:80"
             - "443:443"
